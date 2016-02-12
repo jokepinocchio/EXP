@@ -5,8 +5,8 @@
 //#include <linux/stddef.h>
 //#include <linux/poison.h>
 //#include <linux/const.h>
-#define LIST_POISON1 0
-#define LIST_POISON2 0
+#define LIST_POISON1 NULL
+#define LIST_POISON2 NULL
 /*
  * Simple doubly linked list implementation.
  *

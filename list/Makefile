@@ -1,5 +1,12 @@
-all:
-	@gcc list.c -o list -D_LIST_TEST_
+CC = g++
+CFLAGS = -g -Wall
+LDFLAGS =
+CFLAGS += -D_LIST_TEST_
+
+all: test_list
+
+test_list:
+	gcc list.c $(CFLAGS) -o list
 
 clean:
-	@rm list
+	rm -rf list *.dSYM
