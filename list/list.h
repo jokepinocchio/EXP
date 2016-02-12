@@ -29,7 +29,7 @@
 */
 #define container_of(ptr, type, member) ({          \
     const typeof(((type *)0)->member) * __mptr = (ptr); \
-   (type *)((char *)__mptr - offset(type, member)); })
+    (type *)((char *)__mptr - offset(type, member)); })
 
 struct list_head {
     struct list_head *next, *prev;
