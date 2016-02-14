@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <complex>
+#include <iostream>
+using namespace std;
 
 class person {
 public:
     person(void);
     person(const person& per);
+    //virtual ~person(void);
     virtual ~person(void);
-
+    virtual void dosomeing(void)
+    {
+        cout << "###dosomeing person\n" << endl;
+    }
 private:
 //    char name;
 };
@@ -30,8 +35,11 @@ class student: public person {
 public:
     student(void);
     student(const student& stu);
-    virtual ~student(void);
-
+    ~student(void);
+    void dosomeing(void)
+    {
+        cout << "###dosomeing student\n" << endl;
+    }
 private:
 //    char name;
 };
@@ -54,13 +62,21 @@ bool teststudent(student s)
     return 0;
 }
 
+void testdest()
+{
+    printf("===============\n");
+    class person person1;
+
+    class student student1;
+    printf("===============\n");
+}
 int main(int argc, char** argv)
 {
 //    class student* cstudent = new student;
 //    class student s1;
 //    class student s2(s1);
 
-    class student student1;
+    student student1;
     printf("create class student\n");
 
     teststudent(student1);
@@ -74,5 +90,13 @@ int main(int argc, char** argv)
     //  if (cstudent)
     //     delete cstudent;
 
+//  testdest();
+    printf("################\n");
+    person *p = new student;
+    p->dosomeing();
+    if (p)
+        delete p;
+
+    printf("===============\n");
     return 0;
 }
