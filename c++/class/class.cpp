@@ -9,21 +9,21 @@ public:
     virtual ~person(void);
 
 private:
-    char name;
+//    char name;
 };
 
 person::person(void)
 {
-    printf("person in\n");
+    printf("person constructor\n");
 }
 person::person(const person& per)
 {
-    printf("person copy\n");
+    printf("person copy constructor\n");
 }
 
 person::~person(void)
 {
-    printf("person out\n");
+    printf("person destructor\n");
 }
 
 class student: public person {
@@ -33,19 +33,19 @@ public:
     virtual ~student(void);
 
 private:
-    char name;
+//    char name;
 };
 student::student(void)
 {
-    printf("student in\n");
+    printf("student constructor\n");
 }
 student::student(const student& stu)
 {
-    printf("student copy\n");
+    printf("student copy constructor\n");
 }
 student::~student(void)
 {
-    printf("student out\n");
+    printf("student destructor\n");
 }
 
 //bool teststudent(const student& s)
@@ -61,6 +61,7 @@ int main(int argc, char** argv)
 //    class student s2(s1);
 
     class student student1;
+    printf("create class student\n");
 
     teststudent(student1);
 
