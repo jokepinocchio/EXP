@@ -2,26 +2,22 @@
 
 class A {
 public:
-    void foo()
-        {
-            printf("1\n");
-        }
-    virtual void fun()
-        {
-            printf("2\n");
-        }
+    void foo() {
+        printf("1\n");
+    }
+    virtual void fun() {
+        printf("2\n");
+    }
 };
 
 class B : public A {
 public:
-    void foo()
-        {
-            printf("3\n");
-        }
-    void fun()
-        {
-            printf("4\n");
-        }
+    void foo() {
+        printf("3\n");
+    }
+    void fun() {
+        printf("4\n");
+    }
 };
 
 int main(int argc, char** argv)
