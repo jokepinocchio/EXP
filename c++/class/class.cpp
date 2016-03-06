@@ -13,6 +13,11 @@ public:
     {
         cout << "###dosomeing person\n" << endl;
     }
+	void do1()
+	{
+		this->dosomeing();
+		(*this).dosomeing();
+	}
 private:
 //    char name;
 };
@@ -20,6 +25,7 @@ private:
 person::person(void)
 {
     printf("person constructor\n");
+	do1();
 }
 person::person(const person& per)
 {
